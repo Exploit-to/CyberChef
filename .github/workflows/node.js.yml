@@ -18,9 +18,12 @@ jobs:
 
             - name: Install dependencies
               run: npm install
-
+              
             - name: Build CyberChef
               run: npm run build
+
+            - name: Remove CyberChef ZIP
+              run: rm -rf build/prod/*.zip
 
             - name: Commit and push built files
               run: |
